@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import dts from 'vite-plugin-dts'
-import { cssModulesOptions } from './vite.shared.ts'
 
 const srcDir = fileURLToPath(new URL('./src', import.meta.url))
 
@@ -11,7 +10,6 @@ const srcDir = fileURLToPath(new URL('./src', import.meta.url))
 export default defineConfig({
   plugins: [
     react(),
-    // 生成 .d.ts 声明，并把 tsconfig paths 别名（@/）改写为相对路径，供消费者直接使用
     dts({
       tsconfigPath: './tsconfig.app.json',
       include: ['src'],
@@ -24,9 +22,23 @@ export default defineConfig({
     },
   },
   css: {
-    modules: cssModulesOptions,
+    modules: {
+      localsConvention: 'camelCase',
+      generateScopedName: (local: string, path: string) => {
+        const dirs = path.split('/');
+        const name = dirs.pop()!.replace(/\.module\.css$/, '');
+        const folder = dirs.pop()!;
+
+        if (name === 'variables') {
+          return `efui-${folder}-variables`;
+        }
+        if (name === 'variants') {
+          return `efui-${folder}--${local}`;
+        }
+        return `efui-${name}__${local}`;
+      },
+    }
   },
-  // 库构建不需要 demo 的 public 资源
   publicDir: false,
   build: {
     lib: {
@@ -36,7 +48,6 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      // 外部化 React，避免重复打包
       external: ['react', 'react-dom', 'react/jsx-runtime'],
     },
   },
