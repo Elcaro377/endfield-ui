@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'HarmonyOS Sans SC';
+    font-weight: 500;
+    src: url('@/assets/fonts/HarmonyOS_Sans_SC_Medium.woff2') format('woff2');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HarmonyOS Sans SC';
+    font-weight: 700;
+    src: url('@/assets/fonts/HarmonyOS_Sans_SC_Bold.woff2') format('woff2');
+    font-style: normal;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+:root {
+    --option-height: 1.5rem;
+    --option-padding-block: 0.25rem;
+
+    --option-outline-height: 
+        calc(var(--option-height) + 2 * var(--option-padding-block));
+
+    --radius-pill: 9999px;
+
+    --option-bg: #D6D3D4;
+    --color-dark: #444343;
+
+    --option-shadow: 
+        0px 0px 2px 1px rgba(0, 0, 0, 0.25)
+    ;
+
+    --transition-time: 0.1s;
+
+    --anim-fade-in: fade-in var(--transition-time) both;
+    --anim-fade-out: fade-out var(--transition-time) both;
+
+    --font-harmony: 'HarmonyOS Sans SC';
+}

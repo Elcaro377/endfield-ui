@@ -1,0 +1,11 @@
+.dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    animation: var(--anim-fade-in);
+    z-index: 377;
+}
+
+.dialog-backdrop.closing {
+    animation: var(--anim-fade-out);
+}

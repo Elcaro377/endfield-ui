@@ -1,0 +1,21 @@
+.dialog-body {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: var(--font-harmony);
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: var(--color-dark);
+
+    animation: var(--anim-fade-in);
+    animation-delay: var(--transition-time);
+
+    z-index: 377;
+}
+
+.dialog-body.closing {
+    animation: var(--anim-fade-out);
+    animation-delay: 0s;
+}

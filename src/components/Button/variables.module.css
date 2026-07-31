@@ -1,0 +1,21 @@
+.button {
+    --efui-button-primary-bg: #FFEF01;
+    --efui-button-primary-bg-hover: #FFF568;
+    --efui-button-primary-bg-active: #A8A019;
+    --efui-button-primary-color: #333333;
+    --efui-button-primary-color-hover: #807F7F;
+    --efui-button-primary-color-active: #1E1E1E;
+
+    /* --efui-button-secondary-bg: #454444; */
+    --efui-button-secondary-bg: #535353;
+    --efui-button-secondary-bg-hover: #535252;
+    --efui-button-secondary-bg-active: #303030;
+    --efui-button-secondary-color: #EEECEC;
+
+    --efui-button-normal-bg: #FFFDFD;
+    --efui-button-normal-bg-hover: #999898;
+    --efui-button-normal-bg-active: #7B7A7A;
+    --efui-button-normal-color: #444343;
+    --efui-button-normal-color-hover: #FFFDFD;
+    --efui-button-normal-color-active: #444343;
+}

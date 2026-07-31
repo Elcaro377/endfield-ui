@@ -1,0 +1,17 @@
+.select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+
+    -webkit-user-select: none;
+    user-select: none;
+
+    font-size: 14px;
+
+    font-family: var(--font-harmony);
+
+    /* todo: scale it */
+    transform-origin: top left;
+    scale: 1.5;
+}

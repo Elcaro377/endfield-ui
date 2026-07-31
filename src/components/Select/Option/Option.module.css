@@ -1,0 +1,65 @@
+.option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: var(--option-height);
+    padding-block: var(--option-padding-block);
+
+    background: #D4D2D2;
+    color: var(--color-dark);
+
+    transition-property: background-color, color;
+    transition-duration: var(--transition-time);
+
+    & .selected-deco-line {
+        position: relative;
+
+        left: 0.14rem;
+
+        width: 0.14rem;
+        height: 0.8rem;
+
+        
+        background: white;
+        flex-shrink: 0;
+
+        opacity: 0;
+    }
+
+    & .selected-icon {
+        padding-right: 0.9rem;
+        flex-shrink: 0;
+        scale: 0.5;
+        opacity: 0;
+    }
+
+    & .label {
+        flex: 1;
+        margin-inline: 0.9rem;
+    }
+}
+
+.option:hover {
+    background: #FFFDFD;
+    color: var(--color-dark);
+}
+
+.option:active {
+    background: #A6A5A5;
+    color: var(--color-dark);
+}
+
+.option.selected {
+    background: #606060;
+    color: white;
+
+    & .selected-deco-line {
+        opacity: 1;
+    }
+
+    & .selected-icon {
+        opacity: 1;
+    }
+}
+

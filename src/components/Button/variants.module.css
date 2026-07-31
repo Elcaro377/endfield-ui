@@ -1,0 +1,62 @@
+.primary {
+    background-color:   var(--efui-button-primary-bg);
+    outline-color:      var(--efui-button-primary-bg);
+    color:              var(--efui-button-primary-color);
+    border-color:       var(--efui-button-primary-color);
+}
+
+.primary:hover {
+    background-color:   var(--efui-button-primary-bg-hover);
+    outline-color:      var(--efui-button-primary-bg-hover);
+    color:              var(--efui-button-primary-color-hover);
+    border-color:       var(--efui-button-primary-color-hover);
+}
+
+.primary:active {
+    background-color:   var(--efui-button-primary-bg-active);
+    outline-color:      var(--efui-button-primary-bg-active);
+    color:              var(--efui-button-primary-color-active);
+    border-color:       var(--efui-button-primary-color-active);
+}
+
+.secondary {
+    background-color:   var(--efui-button-secondary-bg);
+    outline-color:      var(--efui-button-secondary-bg);
+    color:              var(--efui-button-secondary-color);
+    border-color:       var(--efui-button-secondary-color);
+}
+
+.secondary:hover {
+    background-color:   var(--efui-button-secondary-bg-hover);
+    outline-color:      var(--efui-button-secondary-bg-hover);
+    color:              var(--efui-button-secondary-color);
+    border-color:       var(--efui-button-secondary-color);
+}
+
+.secondary:active {
+    background-color:   var(--efui-button-secondary-bg-active);
+    outline-color:      var(--efui-button-secondary-bg-active);
+    color:              var(--efui-button-secondary-color);
+    border-color:       var(--efui-button-secondary-color);
+}
+
+.normal {
+    background-color:   var(--efui-button-normal-bg);
+    outline-color:      var(--efui-button-normal-bg);
+    color:              var(--efui-button-normal-color);
+    border-color:       var(--efui-button-normal-color);
+}
+
+.normal:hover {
+    background-color:   var(--efui-button-normal-bg-hover);
+    outline-color:      var(--efui-button-normal-bg-hover);
+    color:              var(--efui-button-normal-color-hover);
+    border-color:       var(--efui-button-normal-color);
+}
+
+.normal:active {
+    background-color:   var(--efui-button-normal-bg-active);
+    outline-color:      var(--efui-button-normal-bg-active);
+    color:              var(--efui-button-normal-color-active);
+    border-color:       var(--efui-button-normal-color-active);
+}

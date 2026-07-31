@@ -1,0 +1,39 @@
+.dialog-actions {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    gap: 1.3rem;
+    left: 50%;
+    top: calc(50% + 18rem / 2);
+    transform: translate(-50%, -50%);
+
+    animation: slide-in calc(var(--transition-time) * 2) both;
+    animation-delay: var(--transition-time);
+
+    z-index: 377;
+}
+
+.dialog-actions.closing {
+    animation: var(--anim-fade-out);
+}
+
+.box {
+    position: relative;
+    top: -0.3rem;
+    padding: 0.5rem;
+    padding-top: 0;
+    background-color: #FFFDFD;
+    border-radius: var(--radius-pill);
+}
+
+@keyframes slide-in {
+    from { 
+        translate: 0.1rem;
+        opacity: 0;
+    }
+
+    to   { 
+        translate: 0; 
+        opacity: 1;
+    }
+}

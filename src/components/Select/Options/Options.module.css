@@ -1,0 +1,37 @@
+.options {
+    position: absolute;
+    top: calc(100% - 2rem);
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    overflow: hidden;
+    
+
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    
+    background: #C6C4C4;
+    box-shadow: var(--option-shadow);
+}
+
+.options::before {
+    content: '';
+    height: 
+        calc(var(--option-outline-height) + 2 * var(--option-padding-block));
+    background: var(--option-bg);
+}
+
+.options::after {
+    content: '';
+    height: var(--option-padding-block);
+    background: var(--option-bg);
+}
+
+.options.closing {
+    animation: var(--anim-fade-out);
+}
