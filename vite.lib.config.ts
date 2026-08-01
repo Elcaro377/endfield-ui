@@ -13,7 +13,7 @@ export default defineConfig({
     dts({
       tsconfigPath: './tsconfig.app.json',
       include: ['src'],
-      exclude: ['src/demo'],
+      exclude: ['src/dev'],
     }),
   ],
   resolve: {

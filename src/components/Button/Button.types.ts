@@ -6,9 +6,6 @@ export const ButtonVariant = {
     Primary: 'primary',
     Secondary: 'secondary',
     Normal: 'normal',
-    // todo: preset
-    // Confirm: 'confirm',
-    // Cancel: 'cancel',
 } as const;
 
 export type ButtonVariant = ValueOf<typeof ButtonVariant>;
