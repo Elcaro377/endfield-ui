@@ -5,11 +5,12 @@ import { DialogBackdrop } from "./DialogBackdrop/DialogBackdrop";
 import { DialogCard } from "./DialogCard/DialogCard";
 
 import { DialogIsOpenContext, DialogSetOpenContext } from "./DialogContext";
+import { DialogBody } from "./DialogBody/DialogBody";
 
 export function Dialog({ 
-    children,
     open, defaultOpen = false, setOpen, onOpenChange,
-    closeOnBlur = false
+    closeOnBlur = false,
+    body, children,
 }: DialogProps) {
     const [_open, _setOpen] = useControllableState({
         value: open,
@@ -23,6 +24,7 @@ export function Dialog({
             <DialogSetOpenContext.Provider value={_setOpen}>
                 <DialogBackdrop closeOnBlur={closeOnBlur} />
                 <DialogCard />
+                {body !== undefined && <DialogBody>{body}</DialogBody>}
                 {children}
             </DialogSetOpenContext.Provider>
         </DialogIsOpenContext.Provider>

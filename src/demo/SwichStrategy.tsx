@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import { DialogBody } from "@/components/Dialog/DialogBody/DialogBody";
 import { Select } from "@/components/Select/Select";
 import type { ValueOf } from "@/types/utils";
 import { ConfirmDialog } from "@/components/Dialog/presets/ConfirmDialog";
@@ -46,8 +45,7 @@ export function SwichStrategy() {
             open={dialogOpen} 
             setOpen={setDialogOpen} 
             onConfirm={handleConfirm}
-        >
-            <DialogBody>是否从{dialogSnap}更改为{newStrategy}?</DialogBody>
-        </ConfirmDialog>
+            body={`是否从${dialogSnap}更改为${newStrategy}?`}
+        />
     </>;
 }

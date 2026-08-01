@@ -6,4 +6,5 @@ export interface DialogProps extends ControllableStatesRecordWithNative<'div', {
 }> {
     children?: ReactNode;
     closeOnBlur?: boolean;
+    body?: ReactNode;
 }
