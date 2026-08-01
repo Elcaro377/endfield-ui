@@ -15,7 +15,7 @@ export function DialogActions(
     const setOpen = useContext(DialogSetOpenContext);
     const { mounted, exiting, onAnimationEnd } = usePresence(open);
 
-    if (!mounted) { return; }
+    if (!mounted || children === undefined) { return; }
 
     const handleClick = notTrigger ? undefined : () => setOpen?.(o => !o);
 

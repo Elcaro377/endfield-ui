@@ -13,7 +13,8 @@ export { DialogTrigger } from './components/Dialog/DialogTrigger/DialogTrigger';
 export type { DialogTriggerProps } from './components/Dialog/DialogTrigger/DialogTrigger.types';
 export { DialogActions } from './components/Dialog/DialogActions/DialogActions';
 export type { DialogActionsProps } from './components/Dialog/DialogActions/DialogActions.types';
-export { Confirm, Cancel } from './components/Dialog/DialogActions/Presets';
+export { ConfirmDialog } from './components/Dialog/presets/ConfirmDialog';
+export type { ConfirmDialogProps } from './components/Dialog/presets/ConfirmDialog.types';
 
 
 export { Select } from './components/Select/Select';

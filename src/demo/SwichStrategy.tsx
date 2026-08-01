@@ -1,11 +1,9 @@
 import { useState } from "react";
 
-import { Dialog } from "@/components/Dialog/Dialog";
-import { DialogActions } from "@/components/Dialog/DialogActions/DialogActions";
 import { DialogBody } from "@/components/Dialog/DialogBody/DialogBody";
 import { Select } from "@/components/Select/Select";
 import type { ValueOf } from "@/types/utils";
-import { Cancel, Confirm } from "@/components/Dialog/DialogActions/Presets";
+import { ConfirmDialog } from "@/components/Dialog/presets/ConfirmDialog";
 
 const Strategy = {
     Quality: '质量',
@@ -44,12 +42,12 @@ export function SwichStrategy() {
             onValueChange={handleStrategyChange}
         />
 
-        <Dialog open={dialogOpen} setOpen={setDialogOpen}>
+        <ConfirmDialog 
+            open={dialogOpen} 
+            setOpen={setDialogOpen} 
+            onConfirm={handleConfirm}
+        >
             <DialogBody>是否从{dialogSnap}更改为{newStrategy}?</DialogBody>
-            <DialogActions>
-                <Cancel />
-                <Confirm onClick={handleConfirm} />
-            </DialogActions>
-        </Dialog>
+        </ConfirmDialog>
     </>;
 }
