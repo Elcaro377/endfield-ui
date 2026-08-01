@@ -4,8 +4,6 @@ import styles from './Button.module.css';
 import variants from './variants.module.css';
 import variables from './variables.module.css';
 
-// import './variables.css';
-
 import { cls } from "@/utils/cls";
 
 const iconModules = import.meta.glob<string>(
