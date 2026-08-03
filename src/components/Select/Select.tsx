@@ -10,13 +10,13 @@ import { Header } from "./Header/Header";
 import { Options } from "./Options/Options";
 
 export function Select<
-    T, O extends readonly OptionData<T>[]
+    O extends readonly OptionData<O[number]['value']>[]
 >({ 
     options, 
     value, defaultValue, setValue, onValueChange, 
     isOpen, defaultIsOpen = false, setIsOpen, onIsOpenChange,
     ...rest 
-}: SelectProps<T, O>
+}: SelectProps<O>
 ) {
     const labels = new Map(options.map(o => [o.value, o.label]));
 

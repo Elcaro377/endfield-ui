@@ -6,7 +6,7 @@ export interface Option<T> {
 }
 
 export interface SelectProps<
-    T, O extends readonly Option<T>[]
+    O extends readonly Option<O[number]["value"]>[]
 > extends ControllableStatesRecordWithNative<'div', {
     value: O[number]["value"];
     isOpen: boolean;
