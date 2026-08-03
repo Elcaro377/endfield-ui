@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react, { reactCompilerPreset } from '@vitejs/plugin-react'
+import babel from '@rolldown/plugin-babel'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import dts from 'vite-plugin-dts'
@@ -10,6 +11,7 @@ const srcDir = fileURLToPath(new URL('./src', import.meta.url))
 export default defineConfig({
   plugins: [
     react(),
+    babel({ presets: [reactCompilerPreset()] }),
     dts({
       tsconfigPath: './tsconfig.app.json',
       include: ['src'],

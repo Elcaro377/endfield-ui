@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react, { reactCompilerPreset } from '@vitejs/plugin-react'
+import babel from '@rolldown/plugin-babel'
 import { fileURLToPath } from 'url'
 
 const srcDir = fileURLToPath(new URL('./src', import.meta.url))
@@ -8,7 +9,7 @@ const srcDir = fileURLToPath(new URL('./src', import.meta.url))
 // https://vite.dev/config/
 export default defineConfig({
   base: './',
-  plugins: [react()],
+  plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
   resolve: {
     alias: {
       '@': srcDir,
