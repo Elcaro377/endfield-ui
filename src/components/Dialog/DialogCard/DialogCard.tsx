@@ -1,12 +1,12 @@
 import { usePresence } from '@/utils/hooks/usePresence';
 import { cls } from '@/utils/cls';
-import { useContext } from 'react';
-import { DialogIsOpenContext } from '../DialogContext';
+
+import { useDialogContexts } from '../DialogContexts';
 
 import styles from './DialogCard.module.css';
 
 export function DialogCard() {
-    const open = useContext(DialogIsOpenContext);
+    const { open } = useDialogContexts('open');
     const { mounted, exiting, onAnimationEnd } = usePresence(open);
 
     if (!mounted) { return; }

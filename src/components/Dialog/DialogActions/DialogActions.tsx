@@ -1,18 +1,19 @@
+import { Children } from "react";
+
 import { usePresence } from "@/utils/hooks/usePresence";
+import { cls } from "@/utils/cls";
+
 import type { DialogActionsProps } from "./DialogActions.types";
+import { useDialogContexts } from "../DialogContexts";
 
 import styles from './DialogActions.module.css';
-import { cls } from "@/utils/cls";
-import { useContext } from "react";
-import { DialogIsOpenContext, DialogSetOpenContext } from "../DialogContext";
 
-import { Children } from "react";
 
 export function DialogActions(
     { notTrigger = false, children }: DialogActionsProps
 ) {
-    const open = useContext(DialogIsOpenContext);
-    const setOpen = useContext(DialogSetOpenContext);
+    const { open, setOpen } = useDialogContexts('open', 'setOpen');
+
     const { mounted, exiting, onAnimationEnd } = usePresence(open);
 
     if (!mounted || children === undefined) { return; }

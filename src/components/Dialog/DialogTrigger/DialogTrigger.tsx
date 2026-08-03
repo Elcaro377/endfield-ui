@@ -1,11 +1,12 @@
-import { cloneElement, useContext, type MouseEventHandler } from "react";
+import { cloneElement, type MouseEventHandler } from "react";
 import type { DialogTriggerProps } from "./DialogTrigger.types";
-import { DialogSetOpenContext } from "../DialogContext";
+// import { DialogSetOpenContext } from "../DialogContext";
+import { useDialogContexts } from "../DialogContexts";
 
 export function DialogTrigger(
     { children }: DialogTriggerProps
 ) {
-    const setOpen = useContext(DialogSetOpenContext);
+    const { setOpen } = useDialogContexts('setOpen');
 
     if (!children) { return null; }
 
